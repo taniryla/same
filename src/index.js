@@ -31,11 +31,11 @@
 
 // arr1
 
-// 2, 6 , 8
+// [1,2,3]
 
-// arr2
+// // arr2
 
-// 4, 36, 64
+// [4,1,9]
 
 // // true
 
@@ -62,43 +62,23 @@ function same(arr1, arr2) {
   obj1 = {};
   obj2 = {};
 
-  let char1 = arr1.toString().forEach(item => {
-    return item;
-  });
-  console.log(char1);
-  let char2 = arr2.toString().forEach(item => {
-    return item;
-  });
-
   for (let i = 0; i < arr1.length; i++) {
-    if (typeof char1 === "number") {
-      let key1 = arr1[i];
-      if (obj1[key1] > 0) {
-        obj1[key1] += 1;
-      } else {
-        obj1[key1] = 1;
-      }
-    }
-  
+    let key1 = arr1[i];
+  }
 
-  for (let j = 0; j < arr2.length; j++) {
-    if (typeof arr2 === "number") {
-      let key2 = arr2[j];
-      if (obj2[key2] > 0) {
-        obj2[key2] += 1;
-      } else {
-        obj2[key2] = 1;
-      }
-    }
-  
+  for (let j = 0; j < char2.length; j++) {
+    let key2 = arr2[j];
+  }
 
   for (let key in obj1) {
-    if (obj2[key] !== obj1[key] * obj1[key]) {
+    if (
+      (typeof key1 === "number" && typeof key2 =
+        "number" && obj2[key] !== obj1[key] * obj1[key])
+    ) {
       return false;
     }
     return true;
   }
 }
 
-  
-same([1, 2, 3], [4, 1, 9])
+same([1, 2, 3], [4, 1, 9]);

@@ -69,7 +69,7 @@ function same(arr1, arr2) {
     }
   }
 
-  for (let j = 0; j < char2.length; j++) {
+  for (let j = 0; j < arr2.length; j++) {
     let key2 = arr2[j];
     if (typeof key2 === "number") {
       obj2[key2];

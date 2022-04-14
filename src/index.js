@@ -59,25 +59,19 @@
 // 23.   How have other people solved this problem?
 
 function same(arr1, arr2) {
-  obj1 = {};
-  obj2 = {};
-
   for (let i = 0; i < arr1.length; i++) {
-    let key1 = arr1[i];
-    if (typeof key1 === "number") {
-      obj1[key1];
-    }
+    let pattern1 = arr1[i];
   }
 
   for (let j = 0; j < arr2.length; j++) {
-    let key2 = arr2[j];
+    let pattern2 = arr2[j];
     if (typeof key2 === "number") {
       obj2[key2];
     }
   }
 
-  for (let key in obj1) {
-    if (obj2[key] !== obj1[key] * obj1[key]) {
+  for (let key in pattern1) {
+    if (pattern2[key] !== pattern1[key] * pattern1[key]) {
       return false;
     }
     return true;

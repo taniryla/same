@@ -62,12 +62,16 @@ function same(arr1, arr2) {
   obj1 = {};
   obj2 = {};
 
-  let char1 = arr1.toString();
+  let char1 = arr1.toString().forEach(item => {
+    return item;
+  });
   console.log(char1);
-  let char2 = arr2.toString();
+  let char2 = arr2.toString().forEach(item => {
+    return item;
+  });
 
   for (let i = 0; i < arr1.length; i++) {
-    if (typeof arr1 === "number") {
+    if (typeof char1 === "number") {
       let key1 = arr1[i];
       if (obj1[key1] > 0) {
         obj1[key1] += 1;

@@ -64,17 +64,20 @@ function same(arr1, arr2) {
 
   for (let i = 0; i < arr1.length; i++) {
     let key1 = arr1[i];
+    if (typeof key1 === "number") {
+      obj1[key1];
+    }
   }
 
   for (let j = 0; j < char2.length; j++) {
     let key2 = arr2[j];
+    if (typeof key2 === "number") {
+      obj2[key2];
+    }
   }
 
   for (let key in obj1) {
-    if (
-      (typeof key1 === "number" && typeof key2 =
-        "number" && obj2[key] !== obj1[key] * obj1[key])
-    ) {
+    if (obj2[key] !== obj1[key] * obj1[key]) {
       return false;
     }
     return true;

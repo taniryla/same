@@ -59,9 +59,20 @@
 // 23.   How have other people solved this problem?
 
 function same(arr1, arr2) {
-  for (let i = 0; i < arr1.length; i++) {
-    arr1[i];
+  // do not need an object
+  // if arr1 and arr2 lengths are not equal return false
+  if (arr1.length !== arr2.length) {
+    return false;
   }
+  // get the index of arr2 at the arr1[i] ** 2, store in a variable and return false if the variable === -1
+  for (let i = 0; i < arr1.length; i++) {
+    let correctIndx = arr2.indexOf(arr1[i] ** 2);
+    if (correctIdx === -1) {
+      return false;
+    }
+  }
+
+  // how do we know if it's true?
 
   for (let j = 0; j < arr2.length; j++) {
     arr2[j];

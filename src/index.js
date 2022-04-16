@@ -67,24 +67,15 @@ function same(arr1, arr2) {
   // get the index of arr2 at the arr1[i] ** 2, store in a variable correctIdx
   // if correctIdx === -1, it means it doesn't exist in the array and is therefor false
   for (let i = 0; i < arr1.length; i++) {
-    let correctIndx = arr2.indexOf(arr1[i] ** 2);
+    let correctIdx = arr2.indexOf(arr1[i] ** 2);
+    console.log(correctIdx);
     if (correctIdx === -1) {
       return false;
     }
   }
 
   // how do we know if it's true?
-
-  for (let j = 0; j < arr2.length; j++) {
-    arr2[j];
-  }
-
-  for (let key in arr1) {
-    if (arr2[key] !== arr1[key] * arr1[key]) {
-      return false;
-    }
-    return true;
-  }
+  return true;
 }
 
-same([1, 2, 3], [4, 1, 9]);
+console.log(same([1, 2, 3], [4, 1, 9]));

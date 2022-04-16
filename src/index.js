@@ -64,7 +64,8 @@ function same(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
   }
-  // get the index of arr2 at the arr1[i] ** 2, store in a variable and return false if the variable === -1
+  // get the index of arr2 at the arr1[i] ** 2, store in a variable correctIdx
+  // if correctIdx === -1, it means it doesn't exist in the array and is therefor false
   for (let i = 0; i < arr1.length; i++) {
     let correctIndx = arr2.indexOf(arr1[i] ** 2);
     if (correctIdx === -1) {

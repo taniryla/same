@@ -60,18 +60,15 @@
 
 function same(arr1, arr2) {
   for (let i = 0; i < arr1.length; i++) {
-    let pattern1 = arr1[i];
+    arr1[i];
   }
 
   for (let j = 0; j < arr2.length; j++) {
-    let pattern2 = arr2[j];
-    if (typeof key2 === "number") {
-      obj2[key2];
-    }
+    arr2[j];
   }
 
-  for (let key in pattern1) {
-    if (pattern2[key] !== pattern1[key] * pattern1[key]) {
+  for (let key in arr1) {
+    if (arr2[key] !== arr1[key] * arr1[key]) {
       return false;
     }
     return true;

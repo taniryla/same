@@ -63,23 +63,28 @@
 // 23.   How have other people solved this problem?
 
 function same(arr1, arr2) {
-  // do not need an object
   // if arr1 and arr2 lengths are not equal return false
   if (arr1.length !== arr2.length) {
     return false;
   }
   // get the index of arr2 at the arr1[i] ** 2, store in a variable correctIdx
   // if correctIdx === -1, it means it doesn't exist in the array and is therefor false
-  for (let i = 0; i < arr1.length; i++) {
-    let correctIdx = arr2.indexOf(arr1[i] ** 2);
-    console.log(correctIdx);
-    if (correctIdx === -1) {
+  let freqCounter1 = {};
+  let freqCounter2 = {};
+  for(let val of arr1) {
+    freqCounter1[val] = (freqCounter1[val] || 0) + 1;
+  }
+  for(let val of arr2) {
+    freqCounter2[val] = (freqCounter2[val] || 0) + 1;
+  }
+  for (let key in freqCounter1){
+    if(!(key **2 in freqCounter2)){
       return false;
     }
-    arr2.splice(correctIdx, 1);
+    if(freqCounter2[key ** 2] !== freqCounter1[key]{
+      return false;
+    }
   }
-
-  // how do we know if it's true?
   return true;
 }
 

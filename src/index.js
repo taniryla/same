@@ -72,6 +72,7 @@ function same(arr1, arr2) {
     if (correctIdx === -1) {
       return false;
     }
+    arr2.splice(correctIdx, 1);
   }
 
   // how do we know if it's true?
